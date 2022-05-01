@@ -1,0 +1,62 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body {
+    background: #12141d;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    cursor: url("./virus.png"), pointer;
+}
+.face {
+    background: Gold;
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.face:hover {
+    background: linear-gradient(180deg, OrangeRed, OrangeRed, Gold);
+}
+.face:after {
+    content: '';
+    position: absolute;
+    background: Chocolate;
+    width: 150px;
+    height: 70px;
+    border-radius: 0 0 70px 70px;
+    top: 180px;
+    transition: .5s;
+}
+.face:hover:after {
+    background: DarkRed;
+    height: 20px;
+    border-radius: 0;
+    top: 210px;
+}
+.eye {
+    background: White;
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    margin: 0 15px;
+    position: relative;
+    top: -40px;
+}
+.eye:after {
+    content: '';
+    position: absolute;
+    background: #333;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    top: 50%;
+    left: 25px;
+    transform: translate(-50%, -50%);
+}
